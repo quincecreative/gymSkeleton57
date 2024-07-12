@@ -298,14 +298,14 @@
           },
           scene
         );
-        ground1.position.y = 1;
+        ground1.position.y = 1.1;
         ground1.material = lineMat;
 
         var ground = BABYLON.MeshBuilder.CreateGround(
           "ground",
           {
-            width: 1600,
-            height: 1600,
+            width: 3600,
+            height: 3600,
           },
           scene
         );
@@ -315,6 +315,7 @@
         ground.material = fadeOut;
         shadowGenerator.addShadowCaster(ground);
         ground1.renderingGroupId = 1;
+        ground.renderingGroupId = 1;
 
         BABYLON.SceneLoader.ImportMesh(
           "",
